@@ -32,19 +32,19 @@ export default class Home extends Component {
         <HomeNav />
         <div>
         <div style={HomeStyles.sliderContainer}className="container">
-          <div className="row">
+          <div className="row no gutters">
             <div className="col-sm-12">
             <div className="carousel carousel-slider center" data-indicators="true">
               <div className="carousel-fixed-item center">
               </div>
               <div  className="carousel-item" href="#one!">
-                <img style={HomeStyles.sliderImage} src="./images/Home_image_placeholder.jpg"/>
+                <img style={HomeStyles.sliderImage} className="w3-grayscale-max" src="./images/homepage_ppl_image1_cropped.jpg"/>
               </div>
               <div className="carousel-item" href="#two!">
-                <img style={HomeStyles.sliderImage} src="./images/Home_image_placeholder.jpg"/>
+                <img style={HomeStyles.sliderImage} className="w3-grayscale-max" src="./images/inthenews_header.jpg"/>
               </div>
               <div className="carousel-item" href="#three!">
-                <img style={HomeStyles.sliderImage} src="./images/Home_image_placeholder.jpg"/>
+                <img style={HomeStyles.sliderImage} className="w3-grayscale-max" src="./images/homepage_ppl_image1_cropped.jpg"/>
               </div>
             </div>
             </div>
@@ -52,7 +52,7 @@ export default class Home extends Component {
         </div>
         </div>
         <div className="container">
-        <div style={HomeStyles.homeText}className="row">
+        <div style={HomeStyles.homeText}className="row no gutters">
           <div className="col-sm-4">
             <p>DiSabato & Bouckenooghe LLC is one of New Jersey’s premiere consumer protection law firms.  We represent consumers and small business and we specialize in matters involving consumer fraud, predatory lending, false advertising and deceptive and abusive business practices. </p>
           </div>

@@ -13,7 +13,7 @@ export const HomeStyles = {
     marginTop:"25px",
   },
   dbLogo:{
-    width:"180px",
+    width:"175px",
     height:"auto",
   },
   navText:{
@@ -29,7 +29,41 @@ export const HomeStyles = {
     borderWidth:"1px",
   },
   menuImage:{
-    width:"1100px",
-    height:"700px",
-  }
+    width:"100%",
+    height:"auto",
+    zIndex:"-1",
+    position:"absolute",
+  },
+  menuContainer:{
+
+  },
+  colStyle:{
+    width:"100%",
+    height:"150px",
+  },
+  menuRowTop: {
+    borderRight:"1px solid orange",
+    borderBottom:"1px solid orange",
+    height:"auto",
+  },
+  menuRowBottom: {
+    borderRight:"1px solid orange",
+    marginTop:"-20px",
+    height:"auto",
+  },
+  menuRightCol: {
+    borderBottom:"1px solid orange",
+    marginTop:"-20px",
+    height:"auto",
+  },
+  menuRightCol2: {
+    marginTop:"-20px",
+    height:"auto",
+  },
+  pTag:{
+    marginLeft:"110px",
+    marginTop:"100px",
+    color:"black",
+    fontSize:"20px",
+  },
 }
