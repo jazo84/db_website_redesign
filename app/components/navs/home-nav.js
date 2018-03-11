@@ -65,11 +65,11 @@ export default class HomeNav extends Component {
             <p style={HomeStyles.pTag}>CASES & ALERTS</p>
             </div>
             </a></div>
-            <div style={HomeStyles.menuRowBottom}className="col-sm-4 menu-hover">
+            <div style={HomeStyles.menuRowBottom}className="col-sm-4 menu-hover"><a href="/blog">
             <div style={HomeStyles.colStyle}>
             <p style={HomeStyles.pTag}>BLOG</p>
             </div>
-            </div>
+            </a></div>
             <div style={HomeStyles.menuRightCol2} className="col-sm-4 menu-hover"> <a href="/contact-us">
             <div style={HomeStyles.colStyle}>
             <p style={HomeStyles.pTag}>CONTACT US</p>

@@ -7,6 +7,7 @@ import Media from "./components/pages/media";
 import Services from "./components/pages/services";
 import ContactUs from "./components/pages/contact-us";
 import Cases from "./components/pages/cases-alerts";
+import Blog from "./components/pages/blog";
 
 export default (
   	<Switch>
@@ -16,5 +17,6 @@ export default (
       <Route path="/services" component={Services} />
       <Route path="/contact-us" component={ContactUs} />
       <Route path="/cases-alerts" component={Cases} />
+      <Route path="/blog" component={Blog} />
     </Switch>
 );

@@ -45,4 +45,14 @@ export const ServicesStyles = {
     msTransform: "translate(-50%, -50%)",
     textAlign: "center",
   },
+  cardImage:{
+    width:"348px",
+    height:"200px",
+  },
+  cardHeight:{
+    height:"350px",
+  },
+  cardText:{
+    color:"f06610",
+  },
 }

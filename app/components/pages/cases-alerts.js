@@ -9,7 +9,7 @@ export default class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      open: false
+      descriptions: []
     }
   }
   componentDidMount(){
@@ -18,8 +18,65 @@ export default class Home extends Component {
         $(this).toggleClass("is-active");
       });
     });
+    fetch('/api/cases-alerts', {
+    headers: {
+              'content-type': 'application/json',
+              'accept': 'application/json'
+          }
+  }).then((response) => response.json())
+      .then((results) => {
+          console.log(results)
+          this.setState({
+            descriptions: results
+          })
+      });
   }
   render() {
+    const appendDescription =()=> {
+      return this.state.descriptions.map((descriptions)=>{
+        return(
+          <div>
+          <div className="container">
+          <div className="row">
+            <div className="col-sm-4">
+              <div className="card blue-grey darken-1">
+                <div className="card-content white-text">
+                  <span className="card-title">{descriptions.title}</span>
+                  <p>{descriptions.description}</p>
+                </div>
+                <div className="card-action">
+                  <a href={descriptions.links}>Read More...</a>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="card blue-grey darken-1">
+                <div className="card-content white-text">
+                  <span className="card-title">{descriptions.title}</span>
+                  <p>{descriptions.description}</p>
+                </div>
+                <div className="card-action">
+                  <a href={descriptions.links}>Read More...</a>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-4">
+              <div className="card blue-grey darken-1">
+                <div className="card-content white-text">
+                  <span className="card-title">{descriptions.title}</span>
+                  <p>{descriptions.description}</p>
+                </div>
+                <div className="card-action">
+                  <a href={descriptions.links}>Read More...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+        )
+      })
+    }
     return (
       <div>
       <HomeNav />
@@ -35,6 +92,7 @@ export default class Home extends Component {
         <div className="row">
           <img style={CasesStyles.topImage} src="./images/cases_header_cropped.jpg" />
         </div>
+        {appendDescription()}
         <p>We pride ourselves on staying at the vanguard of consumer law. We take interesting and novel cases that occasionally get noticed by the media.  We are also deeply committed to serving our local community and the world which we all share.  Please take some time to peruse some of our press mentions, our current noteworthy cases and some of the other things in which we are involved.  If you'd like to learn more and stay in touch with what we're doing, please e-mail us, follow us on Twitter or like us on Facebook.</p>
       </div>
       <div className="container">

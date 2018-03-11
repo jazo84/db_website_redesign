@@ -2,15 +2,17 @@
   "name": "db_website_redesign",
   "version": "1.0.0",
   "description": "Final Project - Website Redesign for DiSabato & Bouckenooghe LLC",
-  "main": "server.js",
+  "main": "server/server.js",
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "pg": "^7.4.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-modal": "^3.3.1",
-    "react-router-dom": "^4.2.2"
+    "react-router-dom": "^4.2.2",
+    "sequelize": "^4.35.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.13",
@@ -22,7 +24,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
