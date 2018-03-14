@@ -9,7 +9,7 @@ export default class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      open: false
+      posts: []
     }
   }
   componentDidMount(){
@@ -17,10 +17,49 @@ export default class Home extends Component {
       $(".hamburger").click(function(){
         $(this).toggleClass("is-active");
       });
-
     });
+    fetch('/api/blog', {
+    headers: {
+              'content-type': 'application/json',
+              'accept': 'application/json'
+          }
+  }).then((response) => response.json())
+      .then((results) => {
+          console.log(results)
+          this.setState({
+            posts: results
+          })
+      });
   }
   render() {
+    const appendPosts =()=> {
+      return this.state.posts.map((posts)=>{
+        return(
+          <div className="row">
+          <div className="col-sm-2">
+          <div className="card">
+            <div className="card-image waves-effect waves-block waves-light">
+              <img className="activator" src={posts.image}/>
+            </div>
+          </div>
+          </div>
+            <div className="col-sm-10">
+            <div className="card">
+              <div className="card-image waves-effect waves-block waves-light">
+              </div>
+              <div className="card-content">
+                <span className="card-title activator grey-text text-darken-4">{posts.title}<i class="material-icons right">more_vert</i></span>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                <p>{posts.description}</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        )
+      })
+    }
     return (
       <div>
       <HomeNav />
@@ -36,18 +75,9 @@ export default class Home extends Component {
         <div className="row">
           <img style={BlogStyles.topImage} src="./images/blog_header_cropped.jpg" className="w3-grayscale-max"/>
         </div>
-        <p>DiSabato & Bouckenooghe LLC is a full service law firm. We have broad experience in a wide range of areas including contractual disputes, employment issues, whistleblower actions, injury claims and personal bankruptcy.  In our core consumer protection practice, however, we specialize in both individual and class action consumer claims, particularly those relating to:</p>
+        <p>Blog</p>
+        {appendPosts()}
       </div>
-      <div className="container">
-      <div className="row">
-        <div className="col-sm-3">
-          One of three columns
-        </div>
-        <div className="col-sm-9">
-          One of three columns
-        </div>
-      </div>
-    </div>
       <br/>
       <FooterNav />
       </div>

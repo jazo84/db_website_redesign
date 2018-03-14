@@ -15,12 +15,9 @@ export default class Home extends Component {
   componentDidMount(){
     $(document).ready(function(){
       $('.carousel.carousel-slider').carousel({fullWidth: true, duration: 200});
-    })
-    setInterval(() => {
-      $('.carousel').carousel('next');
-    }, 3000)
-
-    $(document).ready(function(){
+      setInterval(() => {
+        $('.carousel').carousel('next');
+      }, 3000)
       $(".hamburger").click(function(){
         $(this).toggleClass("is-active");
       });
@@ -31,7 +28,7 @@ export default class Home extends Component {
         <div>
         <HomeNav />
         <div>
-        <div style={HomeStyles.sliderContainer}className="container">
+        <div style={HomeStyles.sliderContainer} className="container">
           <div className="row no gutters">
             <div className="col-sm-12">
             <div className="carousel carousel-slider center" data-indicators="true">

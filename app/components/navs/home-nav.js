@@ -12,7 +12,7 @@ export default class HomeNav extends Component {
   render() {
     return (
       <div>
-      <div className="container">
+      <div id="topNav"className="container">
         <div className="row">
           <div className="col-sm-2">
             <a href="/"><img style={HomeStyles.dbLogo}src="./images/db_Logo.png" /></a>

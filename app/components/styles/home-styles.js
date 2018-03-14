@@ -65,5 +65,6 @@ export const HomeStyles = {
     marginTop:"100px",
     color:"black",
     fontSize:"20px",
+    textDecoration:"none",
   },
 }
