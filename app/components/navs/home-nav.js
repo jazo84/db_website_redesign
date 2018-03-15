@@ -44,7 +44,7 @@ export default class HomeNav extends Component {
              <div style={HomeStyles.menuRowTop} className="col-sm-4 menu-hover">
               <a href="/aboutus">
                 <div style={HomeStyles.colStyle}>
-                <p id="aboutPTag" style={HomeStyles.pTag}>ABOUT US</p>
+                <p id="aboutPTag" style={HomeStyles.pTag} className="aboutus">ABOUT US</p>
                 </div>
               </a>
             </div>

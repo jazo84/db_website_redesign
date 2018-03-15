@@ -75,7 +75,6 @@ export default class Home extends Component {
         <div className="row">
           <img style={BlogStyles.topImage} src="./images/blog_header_cropped.jpg" className="w3-grayscale-max"/>
         </div>
-        <p>Blog</p>
         {appendPosts()}
       </div>
       <br/>

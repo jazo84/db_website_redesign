@@ -11,6 +11,8 @@ export const HomeStyles = {
   },
   sliderContainer:{
     marginTop:"25px",
+    position:"relative",
+    zIndex:"-1",
   },
   dbLogo:{
     width:"175px",
@@ -67,4 +69,8 @@ export const HomeStyles = {
     fontSize:"20px",
     textDecoration:"none",
   },
+
+  imageText:{
+    position:"absolute",
+  }
 }
