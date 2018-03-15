@@ -22,8 +22,16 @@ export default class Home extends Component {
     return (
       <div>
       <HomeNav />
+      <div style={ContactUsStyles.header}className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <p>CONTACT US</p>
+          </div>
+        </div>
+      </div>
+      <br/>
       <div className="container">
-        <div>
+        <div className="row">
           <img style={ContactUsStyles.topImage} src="./images/header_contactus_cropped.jpg" />
         </div>
         <br/>
@@ -48,7 +56,7 @@ export default class Home extends Component {
     </div>
     <div className="row">
       <div className="input-field col s6">
-        <input id="first_name" type="text" class="validate"/>
+        <input id="phone_num" type="text" class="validate"/>
         <label for="first_name">Phone Number</label>
       </div>
       <div className="input-field col s6">
@@ -64,21 +72,21 @@ export default class Home extends Component {
     </div>
     <div className="row">
       <div class="input-field col s6">
-        <input id="first_name" type="text" class="validate"/>
+        <input id="city" type="text" class="validate"/>
         <label for="first_name">City</label>
       </div>
       <div className="input-field col s6">
-        <input id="email" type="email" class="validate"/>
+        <input id="state" type="email" class="validate"/>
         <label for="email">State</label>
       </div>
       <div className="input-field col s6">
-        <input id="email" type="email" class="validate"/>
+        <input id="zipCode" type="email" class="validate"/>
         <label for="email">Zip Code</label>
       </div>
     </div>
     <div className="row">
       <div class="input-field col s12">
-        <input id="email" type="email" class="validate"/>
+        <input id="comments" type="email" class="validate"/>
         <label for="email">Comments</label>
       </div>
     </div>

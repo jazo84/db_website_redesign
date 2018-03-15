@@ -7,5 +7,8 @@ export const BlogStyles = {
     height:'25px',
     backgroundColor:"#777880",
     color: "#ffffff",
+  },
+  imageIcon:{
+    height:"150px",
   }
 }

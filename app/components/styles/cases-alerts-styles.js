@@ -13,5 +13,9 @@ export const CasesStyles = {
   },
   cardAlign:{
     float: "left",
+  },
+
+  imageIcon:{
+    height:"150px",
   }
 }

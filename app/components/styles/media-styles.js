@@ -10,5 +10,8 @@ export const MediaStyles = {
   },
   cardImage:{
     backgroundImage: "url('https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg')",
+  },
+  imageIcon:{
+    height:"150px",
   }
 }

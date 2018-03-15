@@ -37,23 +37,23 @@ export default class Home extends Component {
         return(
           <div className="row">
           <div className="col-sm-2">
-          <div className="card">
+          <div style={MediaStyles.imageIcon} className="card">
             <div className="card-image waves-effect waves-block waves-light">
               <img className="activator" src={articles.image}/>
             </div>
           </div>
           </div>
             <div className="col-sm-10">
-            <div className="card">
+            <div style={MediaStyles.imageIcon}className="card">
               <div className="card-image waves-effect waves-block waves-light">
               </div>
               <div className="card-content">
-                <span className="card-title activator grey-text text-darken-4">{articles.title}<i class="material-icons right">more_vert</i></span>
-                <p><a href={articles.links}>Read More...</a></p>
+                <span className="card-title activator grey-text text-darken-4">{articles.title}<i class="material-icons right">expand_less</i></span>
+                <p><a href={articles.links}>Additional Information</a></p>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                <p>{articles.description}</p>
+                <p>{articles.press_mentions}</p>
               </div>
             </div>
           </div>
